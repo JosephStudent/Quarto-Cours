@@ -11,6 +11,27 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Pour apprendre plus sur l’analyse de donnée je vou conseil des sites comme Kaggle qui vous permettra d’avoir des connaissances et de passer des certifications reconnues"
+  },
+  {
+    "objectID": "exercice_NA.html",
+    "href": "exercice_NA.html",
+    "title": "Gestion des NA: Exercice",
+    "section": "",
+    "text": "Gestion des NA en R\n\nVoici quelques exercices pour vous entrainez Amusez vous bien"
+  },
+  {
+    "objectID": "exerciceR.html",
+    "href": "exerciceR.html",
+    "title": "Manipulation de données: Exercice",
+    "section": "",
+    "text": "Manipulation des Chaînes de Caractères en R\n\nVoici quelques exercices pour vous entrainez Amusez vous bien"
+  },
+  {
+    "objectID": "exercice_Viz.html",
+    "href": "exercice_Viz.html",
+    "title": "Visualisation Graphique: Exercice",
+    "section": "",
+    "text": "Visualisation Graphique en R\n\nVoici quelques exercices pour vous entrainez Amusez vous bien"
   }
 ]

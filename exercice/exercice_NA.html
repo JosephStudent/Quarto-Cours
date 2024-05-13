@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DataCamp Light | NA Handling Exercises</title>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+
+    [data-datacamp-exercise] {
+        visibility: hidden;
+      }
+  </style>
+
+  <script async src="https://cdn.datacamp.com/dcl-react-dev.js.gz"></script>
+</head>
+<body>
+  <!-- Exercise 1: Identifying Missing Values -->
+  <div class="exercise">
+    <div class="title">
+      <h2>Identifying Missing Values</h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="auto">
+      <code data-type="sample-code">
+        # Create a vector with missing values
+        data_vector <- c(1, NA, 3, NA, 5)
+
+        # Identify the positions of missing values
+      </code>
+      <code data-type="solution">
+        # Create a vector with missing values
+        data_vector <- c(1, NA, 3, NA, 5)
+
+        # Identify the positions of missing values
+        missing_positions <- is.na(data_vector)
+        print(missing_positions)
+      </code>
+      <code data-type="sct">
+        test_object("missing_positions")
+        test_function("print", args = "missing_positions")
+        success_msg("Great job identifying missing values in the vector!")
+      </code>
+      <div data-type="hint">
+        Use the `is.na()` function to find which elements are NA in `data_vector`.
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise 2: Excluding Missing Values in Calculations -->
+  <div class="exercise">
+    <div class="title">
+      <h2>Excluding NAs in Calculations</h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="auto">
+      <code data-type="sample-code">
+        # Create a numeric vector with NAs
+        num_vector <- c(1, 2, NA, 4, 5)
+
+        # Calculate the mean excluding NA values
+      </code>
+      <code data-type="solution">
+        # Create a numeric vector with NAs
+        num_vector <- c(1, 2, NA, 4, 5)
+
+        # Calculate the mean excluding NA values
+        mean_value <- mean(num_vector, na.rm = TRUE)
+        print(mean_value)
+      </code>
+      <code data-type="sct">
+        test_object("mean_value")
+        test_function("print", args = "mean_value")
+        success_msg("Excellent! You've successfully calculated the mean excluding missing values.")
+      </code>
+      <div data-type="hint">
+        Use the `mean()` function with the argument `na.rm = TRUE` to exclude NAs.
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise 3: Replacing Missing Values -->
+  <div class="exercise">
+    <div class="title">
+      <h2>Replacing Missing Values</h2>
+    </div>
+    <div data-datacamp-exercise data-lang="r" data-height="auto">
+      <code data-type="sample-code">
+        # Vector with missing values
+        values <- c(NA, 2, 3, NA, 5)
+
+        # Replace missing values with the number 0
+      </code>
+      <code data-type="solution">
+        # Vector with missing values
+        values <- c(NA, 2, 3, NA, 5)
+
+        # Replace missing values with the number 0
+        values[is.na(values)] <- 0
+        print(values)
+      </code>
+      <code data-type="sct">
+        test_object("values")
+        test_function("print", args = "values")
+        success_msg("Well done! You've successfully replaced missing values with zeros.")
+      </code>
+      <div data-type="hint">
+        Use indexing with `is.na()` to replace NAs with zeros in the `values` vector.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

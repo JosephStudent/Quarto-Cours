@@ -4,6 +4,6 @@ title: "Visualisation Graphique: Exercice"
 
 ### Visualisation Graphique en R
 
-<p id=textIntro> <strong>Voici quelques exercices pour vous entrainez</strong>Amusez vous bien</p>
+<p id=textIntro> <strong>Voici quelques exercices pour vous entrainez</strong>  Amusez vous bien</p>
 
 <iframe src="exercice/exercice_Viz.html" width="1000px" height="600px"></iframe>

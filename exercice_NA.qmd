@@ -4,6 +4,6 @@ title: "Gestion des NA: Exercice"
 
 ### Gestion des NA en R
 
-<p id=textIntro> <strong>Voici quelques exercices pour vous entrainez</strong>Amusez vous bien</p>
+<p id=textIntro> <strong>Voici quelques exercices pour vous entrainez</strong>  Amusez vous bien</p>
 
 <iframe src="exercice/exercice_NA.html" width="1000px" height="600px"></iframe>
