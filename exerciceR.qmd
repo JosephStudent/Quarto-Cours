@@ -1,9 +1,6 @@
 ---
 title: "Manipulation de données: Exercice"
 ---
-
-### Manipulation des Chaînes de Caractères en R
-
 <p id=textIntro> <strong>Voici quelques exercices pour vous entrainez</strong>  Amusez vous bien</p>
 
 <iframe src="exercice/exerciceR.html" width="1000px" height="600px"></iframe>
