@@ -1,0 +1,63 @@
+---
+title: "Manipulation de données avancées"
+---
+
+### Manipulation des Chaînes de Caractères en R
+
+<p id=textIntro> <strong>Les chaînes de caractères, ou "strings"</strong>, sont essentielles pour stocker du texte. En R, vous pouvez créer des chaînes de caractères avec des guillemets simples ou doubles.</p>
+
+```{r}
+chaine_simple <- 'Ceci est une chaîne de caractères en guillemets simples.'
+chaine_double <- "Ceci est une chaîne de caractères en guillemets doubles."
+```
+
+Les guillemets simples et doubles sont interchangeables, mais il est important de les utiliser de manière cohérente dans votre code.
+
+### Fonctions de Manipulation des Chaînes de Caractères
+
+<p id=textIntro> <strong>Concaténation</strong> : Joindre deux chaînes de caractères en utilisant l’opérateur + ou la fonction paste().</p>
+
+```{r}
+chaine1 <- "Hello"
+chaine2 <- "World"
+resultat <- paste(chaine1, chaine2)
+```
+
+<p id=textIntro> <strong>Longueur d’une chaîne</strong> : Utiliser <strong>nchar() </strong>pour obtenir la longueur d’une chaîne de caractères.</p>
+
+```{r}
+chaine <- "Bonjour"
+longueur <- nchar(chaine)
+```
+
+<p id=textIntro> <strong>- Extraction de sous-chaînes</strong> : Utiliser <strong>substr()</strong> pour extraire des segments spécifiques d'une chaîne.</p>
+
+```{r}
+chaine <- "Manipulation de texte"
+sous_chaine <- substr(chaine, start = 1, stop = 12)
+```
+
+<p id=textIntro> <strong>- Recherche de motifs</strong> : Utiliser <strong>grepl()</strong> pour vérifier la présence de motifs spécifiques dans une chaîne.</p>
+
+```{r}
+chaine <- "Analyse de données en R"
+motif <- "R"
+contient_R <- grepl(motif, chaine)
+```
+
+### Utilisation des Expressions Régulières (Regex)
+
+<p id=textIntro> Les<strong> expressions régulières, ou "regex"</strong>, sont des motifs utilisés pour la recherche et la manipulation de texte. Elles permettent de spécifier des modèles à rechercher dans un texte, très utiles dans la manipulation de texte et le traitement de données.</p>
+
+<p id=textIntro> <strong>Exemples d'Utilisation de Regex en R avec stringr</strong></p>
+
+<p id=textIntro> <strong>- Trouver des motifs</strong> : Rechercher des numéros de téléphone dans un texte.</p>
+
+```{r}
+texte <- "Le numéro de téléphone de Jean est 555-123-4567. Le mien est 123-456-7890."
+resultat <- str_extract_all(texte, "\\d{3}-\\d{3}-\\d{4}")
+```
+
+<p id=textIntro> <strong>- Remplacer des motifs</strong> : Modifier des éléments spécifiques dans une chaîne de caractères.</p>
+
+<p id=textIntro>Passons maintenant<strong>A la Gestion des NA</strong>, Clique sur ce lien :  <a href="Gestion_de_NA.qmd">Gestion des NA</a>

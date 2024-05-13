@@ -1,0 +1,70 @@
+---
+title: "Gestion des Valeurs Manquantes (NA) en R"
+---
+
+### Gestion des Valeurs Manquantes en R
+
+<p id="textIntro">Dans le traitement de données en R, il est crucial de savoir gérer les valeurs manquantes, qui sont représentées par <strong>NA</strong> pour 'Not Available'.</p>
+
+#### Identification des valeurs manquantes
+
+Pour identifier où les valeurs NA se trouvent dans vos données, utilisez la fonction <strong>is.na()</strong>.
+
+```{r}
+# Création d'un vecteur avec des valeurs NA
+vecteur <- c(1, NA, 3, NA, 5)
+
+# Identification des positions des NA
+positions_na <- is.na(vecteur)
+print(positions_na)
+# [1] FALSE TRUE FALSE TRUE FALSE
+```
+
+### Exclusion des NA dans les calculs
+
+<p id="textIntro">R permet d'exclure les valeurs NA lors des calculs grâce à l'argument na.rm = TRUE.</p>
+
+```{r}
+# Calcul de la moyenne en excluant les NA
+moyenne_ajustee <- mean(vecteur, na.rm = TRUE)
+print(moyenne_ajustee)
+# [1] 3
+```
+
+### Remplacement des valeurs manquantes
+<p id="textIntro">Vous pouvez remplacer les valeurs NA par d'autres valeurs spécifiques en utilisant<strong> replace()</strong> ou les retirer complètement avec <strong>na.omit()</strong>.</p>
+
+```{r}
+# Remplacement des NA par zéro
+vecteur_ajuste <- replace(vecteur, is.na(vecteur), 0)
+print(vecteur_ajuste)
+# [1] 1 0 3 0 5
+
+# Retrait des éléments NA d'un vecteur
+vecteur_sans_na <- na.omit(vecteur)
+print(vecteur_sans_na)
+# [1] 1 3 5
+# attr(,"na.action")
+# [1] 2 4
+# attr(,"class")
+# [1] "omit"
+```
+
+### Gestion des NA dans un DataFrame
+<p id="textIntro">Dans un DataFrame, les lignes ou colonnes contenant des NA peuvent être supprimées pour éviter les erreurs dans les analyses.</p>
+
+```{r}
+# Création d'un DataFrame avec des NA
+df <- data.frame(x = c(1, 2, NA, 4), y = c("a", "b", "c", NA))
+
+# Suppression des lignes contenant des NA
+df_nettoye <- na.omit(df)
+print(df_nettoye)
+#   x y
+# 1 1 a
+# 2 2 b
+```
+
+<p id="textIntro">Maîtriser la gestion des NA est essentiel pour assurer l'intégrité et la précision des analyses de données en R.</p>
+
+<p id=textIntro>Passons maintenant<strong>A la Visualisation</strong>, Clique sur ce lien :  <a href="visualisation.qmd">Visualisation graphique</a>

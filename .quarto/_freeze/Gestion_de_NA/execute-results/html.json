@@ -1,0 +1,17 @@
+{
+  "hash": "d5b7bcad85b661305360d5b5e7a8e12c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Gestion des Valeurs Manquantes (NA) en R\"\n---\n\n\n### Gestion des Valeurs Manquantes en R\n\n<p id=\"textIntro\">Dans le traitement de données en R, il est crucial de savoir gérer les valeurs manquantes, qui sont représentées par <strong>NA</strong> pour 'Not Available'.</p>\n\n#### Identification des valeurs manquantes\n\nPour identifier où les valeurs NA se trouvent dans vos données, utilisez la fonction <strong>is.na()</strong>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Création d'un vecteur avec des valeurs NA\nvecteur <- c(1, NA, 3, NA, 5)\n\n# Identification des positions des NA\npositions_na <- is.na(vecteur)\nprint(positions_na)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] FALSE  TRUE FALSE  TRUE FALSE\n```\n\n\n:::\n\n```{.r .cell-code}\n# [1] FALSE TRUE FALSE TRUE FALSE\n```\n:::\n\n\n### Exclusion des NA dans les calculs\n\n<p id=\"textIntro\">R permet d'exclure les valeurs NA lors des calculs grâce à l'argument na.rm = TRUE.</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Calcul de la moyenne en excluant les NA\nmoyenne_ajustee <- mean(vecteur, na.rm = TRUE)\nprint(moyenne_ajustee)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 3\n```\n\n\n:::\n\n```{.r .cell-code}\n# [1] 3\n```\n:::\n\n\n### Remplacement des valeurs manquantes\n<p id=\"textIntro\">Vous pouvez remplacer les valeurs NA par d'autres valeurs spécifiques en utilisant<strong> replace()</strong> ou les retirer complètement avec <strong>na.omit()</strong>.</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Remplacement des NA par zéro\nvecteur_ajuste <- replace(vecteur, is.na(vecteur), 0)\nprint(vecteur_ajuste)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 1 0 3 0 5\n```\n\n\n:::\n\n```{.r .cell-code}\n# [1] 1 0 3 0 5\n\n# Retrait des éléments NA d'un vecteur\nvecteur_sans_na <- na.omit(vecteur)\nprint(vecteur_sans_na)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 1 3 5\nattr(,\"na.action\")\n[1] 2 4\nattr(,\"class\")\n[1] \"omit\"\n```\n\n\n:::\n\n```{.r .cell-code}\n# [1] 1 3 5\n# attr(,\"na.action\")\n# [1] 2 4\n# attr(,\"class\")\n# [1] \"omit\"\n```\n:::\n\n\n### Gestion des NA dans un DataFrame\n<p id=\"textIntro\">Dans un DataFrame, les lignes ou colonnes contenant des NA peuvent être supprimées pour éviter les erreurs dans les analyses.</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Création d'un DataFrame avec des NA\ndf <- data.frame(x = c(1, 2, NA, 4), y = c(\"a\", \"b\", \"c\", NA))\n\n# Suppression des lignes contenant des NA\ndf_nettoye <- na.omit(df)\nprint(df_nettoye)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n  x y\n1 1 a\n2 2 b\n```\n\n\n:::\n\n```{.r .cell-code}\n#   x y\n# 1 1 a\n# 2 2 b\n```\n:::\n\n\n<p id=\"textIntro\">Maîtriser la gestion des NA est essentiel pour assurer l'intégrité et la précision des analyses de données en R.</p>\n\n<p id=textIntro>Passons maintenant<strong>A la Visualisation</strong>, Clique sur ce lien :  <a href=\"visualisation.qmd\">Visualisation graphique</a>",
+    "supporting": [
+      "Gestion_de_NA_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

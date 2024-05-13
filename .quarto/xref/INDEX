@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "2b1f4af7"
+  },
+  "about.qmd": {
+    "about.html": "7551d961"
+  },
+  "exerciceR.qmd": {
+    "exerciceR.html": "6d270a45"
+  },
+  "manipulationR.qmd": {
+    "manipulationR.html": "17e2abf2"
+  },
+  "visualisation.qmd": {
+    "visualisation.html": "fb3343d7"
+  },
+  "exercice_NA.qmd": {
+    "exercice_NA.html": "71317c2e"
+  },
+  "exercice_Viz.qmd": {
+    "exercice_Viz.html": "11e20ebe"
+  },
+  "Gestion_de_NA.qmd": {
+    "Gestion_de_NA.html": "aab16f7b"
+  }
+}
