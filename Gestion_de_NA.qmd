@@ -67,4 +67,4 @@ print(df_nettoye)
 
 <p id="textIntro">Maîtriser la gestion des NA est essentiel pour assurer l'intégrité et la précision des analyses de données en R.</p>
 
-<p id=textIntro>Passons maintenant<strong>A la Visualisation</strong>, Clique sur ce lien :  <a href="visualisation.qmd">Visualisation graphique</a>
+<p id=textIntro>Passons maintenant<strong> A la Visualisation</strong>, Clique sur ce lien :  <a href="visualisation.qmd">Visualisation graphique</a>

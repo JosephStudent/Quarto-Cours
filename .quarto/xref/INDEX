@@ -1,26 +1,26 @@
 {
-  "index.qmd": {
-    "index.html": "2b1f4af7"
-  },
   "about.qmd": {
-    "about.html": "7551d961"
+    "about.html": "a9c7d97d"
   },
   "exerciceR.qmd": {
-    "exerciceR.html": "6d270a45"
-  },
-  "manipulationR.qmd": {
-    "manipulationR.html": "17e2abf2"
-  },
-  "visualisation.qmd": {
-    "visualisation.html": "fb3343d7"
+    "exerciceR.html": "d8bd19c7"
   },
   "exercice_NA.qmd": {
-    "exercice_NA.html": "71317c2e"
+    "exercice_NA.html": "94f73d41"
   },
   "exercice_Viz.qmd": {
-    "exercice_Viz.html": "11e20ebe"
+    "exercice_Viz.html": "fb2174bd"
   },
   "Gestion_de_NA.qmd": {
-    "Gestion_de_NA.html": "aab16f7b"
+    "Gestion_de_NA.html": "aae43321"
+  },
+  "index.qmd": {
+    "index.html": "16ceef38"
+  },
+  "manipulationR.qmd": {
+    "manipulationR.html": "db065476"
+  },
+  "visualisation.qmd": {
+    "visualisation.html": "d88b2250"
   }
 }

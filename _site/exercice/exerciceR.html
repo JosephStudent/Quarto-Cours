@@ -49,9 +49,7 @@
           </code>
           <code data-type="sct">
             test_object("my_string")
-            test_function("print", args = "my_string")
-            test_object("full_greeting")
-            test_function("print", args = "full_greeting")
+            test_object("full_greeting", incorrect_msg="Vous avez mal concaténé les chaines", undefined_msg="Vous devez appeler votre variable full_greeting")
             success_msg("Great job! You've successfully manipulated and combined strings.")
           </code>
           <div data-type="hint">

@@ -7,6 +7,8 @@ title: "Manipulation de données avancées"
 <p id=textIntro> <strong>Les chaînes de caractères, ou "strings"</strong>, sont essentielles pour stocker du texte. En R, vous pouvez créer des chaînes de caractères avec des guillemets simples ou doubles.</p>
 
 ```{r}
+library(tidyverse)
+library(stringr)
 chaine_simple <- 'Ceci est une chaîne de caractères en guillemets simples.'
 chaine_double <- "Ceci est une chaîne de caractères en guillemets doubles."
 ```
@@ -16,6 +18,7 @@ Les guillemets simples et doubles sont interchangeables, mais il est important d
 ### Fonctions de Manipulation des Chaînes de Caractères
 
 <p id=textIntro> <strong>Concaténation</strong> : Joindre deux chaînes de caractères en utilisant l’opérateur + ou la fonction paste().</p>
+
 
 ```{r}
 chaine1 <- "Hello"
@@ -55,9 +58,9 @@ contient_R <- grepl(motif, chaine)
 
 ```{r}
 texte <- "Le numéro de téléphone de Jean est 555-123-4567. Le mien est 123-456-7890."
-resultat <- str_extract_all(texte, "\\d{3}-\\d{3}-\\d{4}")
+resultat <-stringr::str_extract_all(texte, "\\d{3}-\\d{3}-\\d{4}")
 ```
 
 <p id=textIntro> <strong>- Remplacer des motifs</strong> : Modifier des éléments spécifiques dans une chaîne de caractères.</p>
 
-<p id=textIntro>Passons maintenant<strong>A la Gestion des NA</strong>, Clique sur ce lien :  <a href="Gestion_de_NA.qmd">Gestion des NA</a>
+<p id=textIntro>Passons maintenant<strong> A la Gestion des NA</strong>, Clique sur ce lien :  <a href="Gestion_de_NA.qmd">Gestion des NA</a>

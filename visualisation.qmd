@@ -23,7 +23,7 @@ library(gridExtra)
 
 Barplot: Illustration du nombre de voitures par type de moteur.
 ```{r}
-# Calcul de la distribution des types de moteurs
+ # Calcul de la distribution des types de moteurs
 distribution_moteur <- table(mtcars$vs)
 
 # Création d'un barplot avec R base
@@ -64,10 +64,10 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_smooth(method = "lm", se = TRUE, color = "blue") +
   labs(title = "Consommation de carburant par poids", x = "Poids (wt)", y = "Miles par gallon") +
   theme_bw()
-  ```
+```
 
   Boxplot: Analyse de la distribution des miles par gallon en fonction du type de moteur.
-  ```{r}
+```{r}
   # Boxplot avec R base
 boxplot(mpg ~ vs, data = mtcars, main = "Miles par gallon selon le type de moteur",
         xlab = "Type de moteur", ylab = "Miles par gallon")
@@ -81,4 +81,4 @@ ggplot(mtcars, aes(x = factor(vs), y = mpg)) +
 
 <p id="textIntro">Ce guide montre comment des principes de visualisation de données clairs et des outils puissants comme R et ggplot2 peuvent vous aider à interpréter et présenter vos données de manière efficace.</p>
 
-<p id=textIntro>Genial vous pouvez maintenant passer aux Exercices<strong>Voici les exercices preparer pour vous</strong>,<a href="exerciceR.qmd">Exercice Manipulation</a><a href="exercice_NA.qmd">Exercice NA</a><a href="exerciceViz.qmd">Exercice Visualisation</a> Amusez vous bien</p>
+<p id=textIntro>Genial vous pouvez maintenant passer aux Exercices<strong>  Voici les exercices preparer pour vous</strong> , <a href="exerciceR.qmd">Exercice Manipulation</a> , <a href="exercice_NA.qmd">Exercice NA</a> , <a href="exercice_Viz.qmd">Exercice Visualisation</a>  Amusez vous bien</p>
