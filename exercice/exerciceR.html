@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DataCamp Light | Standalone example</title>
+  <link rel='shortcut icon' type='image/x-icon' href='https://www.datacamp.com/assets/favicon.ico'/>
+  <style>
+    .exercise {
+      margin: 50px;
+    }
+
+    [data-datacamp-exercise] {
+        visibility: hidden;
+      }
+  </style>
+
+  <script async src="https://cdn.datacamp.com/dcl-react-dev.js.gz"></script>
+</head>
+<body>
+    <div class="exercise">
+        <div class="title">
+          <h2>Manipulating Strings in R</h2>
+        </div>
+        <div data-datacamp-exercise data-lang="r"  data-height="auto">
+
+          <code data-type="sample-code">
+            # Define a simple string
+            my_string <- "DataCamp is fun!"
+      
+            # Print the string
+            print(my_string)
+      
+            # Concatenate two strings
+            greeting <- "Hello"
+            name <- "R learner"
+          </code>
+          <code data-type="solution">
+            # Define a simple string
+            my_string <- "DataCamp is fun!"
+      
+            # Print the string
+            print(my_string)
+      
+            # Concatenate two strings
+            greeting <- "Hello"
+            name <- "R learner"
+            full_greeting <- paste(greeting, name)
+            print(full_greeting)
+          </code>
+          <code data-type="sct">
+            test_object("my_string")
+            test_object("full_greeting", incorrect_msg="Vous avez mal concaténé les chaines", undefined_msg="Vous devez appeler votre variable full_greeting")
+            success_msg("Great job! You've successfully manipulated and combined strings.")
+          </code>
+          <div data-type="hint">
+            Use the `paste()` function to concatenate `greeting` and `name` into `full_greeting`.
+          </div>
+        </div>
+      </div>
+      
+      <div class="exercise">
+        <div class="title">
+          <h2>Finding Patterns in Strings</h2>
+        </div>
+        <div data-datacamp-exercise data-lang="r"  data-height="auto">
+          <code data-type="sample-code">
+            # Define a string to search
+            search_text <- "Find the number 42 in this string."
+      
+            # Use grepl to find if '42' is in the string
+          </code>
+          <code data-type="solution">
+            # Define a string to search
+            search_text <- "Find the number 42 in this string."
+      
+            # Use grepl to find if '42' is in the string
+            found <- grepl("42", search_text)
+            print(found)
+          </code>
+          <code data-type="sct">
+            test_object("found")
+            test_output_contains("TRUE", pattern = TRUE, no_output_msg = "Make sure your function checks for '42' and prints the result.")
+            success_msg("Excellent! You've learned how to search for patterns in strings using `grepl`.")
+          </code>          
+          <div data-type="hint">
+            Use the `grepl()` function to check if "42" is present in `search_text`.
+          </div>
+        </div>
+      </div>
+      
+      <div class="exercise">
+        <div class="title">
+          <h2>String Transformation</h2>
+        </div>
+        <div data-datacamp-exercise data-lang="r"  data-height="auto">
+          <code data-type="sample-code">
+            # Define a string
+            original_text <- "r Is Case Sensitive"
+      
+            # Convert to lower case
+            # Convert to upper case
+          </code>
+          <code data-type="solution">
+            # Define a string
+            original_text <- "r Is Case Sensitive"
+      
+            # Convert to lower case
+            lower_text <- tolower(original_text)
+            print(lower_text)
+      
+            # Convert to upper case
+            upper_text <- toupper(original_text)
+            print(upper_text)
+          </code>
+          <code data-type="sct">
+            test_object("lower_text")
+            test_output_contains("r is case sensitive", pattern = TRUE, no_output_msg = "Make sure to convert the text to lower case and print it.")
+            test_object("upper_text")
+            test_output_contains("R IS CASE SENSITIVE", pattern = TRUE, no_output_msg = "Make sure to convert the text to upper case and print it.")
+            success_msg("Well done! You've mastered converting the case of strings in R.")
+          </code>          
+          <div data-type="hint">
+            Use the `tolower()` function to convert `original_text` to lower case and `toupper()` to convert it to upper case.
+          </div>
+        </div>
+      </div>      
+</body>
+</html>
