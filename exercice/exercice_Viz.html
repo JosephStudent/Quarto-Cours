@@ -41,11 +41,10 @@
           labs(title = "Number of Cars by Cylinder", x = "Cylinders", y = "Count")
       </code>
       <code data-type="sct">
-        test_function("ggplot", args = c("data", "mapping"))
-        test_function("geom_bar")
-        test_function("labs")
+        test_output_contains("Number of Cars by Cylinder", pattern = TRUE, no_output_msg="Make sure to set the title of the barplot.")
+        test_object("ggplot")
         success_msg("Great job creating a barplot!")
-      </code>
+      </code>      
       <div data-type="hint">
         Use `ggplot(data = mtcars, aes(factor(cyl))) + geom_bar()` to create the barplot.
       </div>
@@ -75,11 +74,10 @@
           labs(title = "Distribution of Miles Per Gallon", x = "Miles Per Gallon", y = "Frequency")
       </code>
       <code data-type="sct">
-        test_function("ggplot", args = c("data", "mapping"))
-        test_function("geom_histogram")
-        test_function("labs")
+        test_output_contains("Distribution of Miles Per Gallon", pattern = TRUE, no_output_msg="Make sure to set the title of the histogram.")
+        test_object("ggplot")
         success_msg("Well done on creating a histogram!")
-      </code>
+      </code>      
       <div data-type="hint">
         Use `ggplot(data = mtcars, aes(mpg)) + geom_histogram(bins = 10)` to create the histogram.
       </div>
@@ -109,11 +107,10 @@
           labs(title = "Weight vs. Miles Per Gallon", x = "Weight (1000 lbs)", y = "Miles Per Gallon")
       </code>
       <code data-type="sct">
-        test_function("ggplot", args = c("data", "mapping"))
-        test_function("geom_point")
-        test_function("labs")
+        test_output_contains("Weight vs. Miles Per Gallon", pattern = TRUE, no_output_msg="Make sure to set the title of the scatter plot.")
+        test_object("ggplot")
         success_msg("Excellent work on creating a scatter plot!")
-      </code>
+      </code>      
       <div data-type="hint">
         Use `ggplot(data = mtcars, aes(x = wt, y = mpg)) + geom_point()` to create the scatter plot.
       </div>

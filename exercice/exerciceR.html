@@ -48,7 +48,6 @@
             print(full_greeting)
           </code>
           <code data-type="sct">
-            test_output_contains("Hello", pattern=True, no_output_msg="Vous n'avez")
             test_object("my_string")
             test_object("full_greeting", incorrect_msg="Vous avez mal concaténé les chaines", undefined_msg="Vous devez appeler votre variable full_greeting")
             success_msg("Great job! You've successfully manipulated and combined strings.")
@@ -80,9 +79,9 @@
           </code>
           <code data-type="sct">
             test_object("found")
-            test_function("print", args = "found")
+            test_output_contains("TRUE", pattern = TRUE, no_output_msg = "Make sure your function checks for '42' and prints the result.")
             success_msg("Excellent! You've learned how to search for patterns in strings using `grepl`.")
-          </code>
+          </code>          
           <div data-type="hint">
             Use the `grepl()` function to check if "42" is present in `search_text`.
           </div>
@@ -115,11 +114,11 @@
           </code>
           <code data-type="sct">
             test_object("lower_text")
-            test_function("print", args = "lower_text")
+            test_output_contains("r is case sensitive", pattern = TRUE, no_output_msg = "Make sure to convert the text to lower case and print it.")
             test_object("upper_text")
-            test_function("print", args = "upper_text")
+            test_output_contains("R IS CASE SENSITIVE", pattern = TRUE, no_output_msg = "Make sure to convert the text to upper case and print it.")
             success_msg("Well done! You've mastered converting the case of strings in R.")
-          </code>
+          </code>          
           <div data-type="hint">
             Use the `tolower()` function to convert `original_text` to lower case and `toupper()` to convert it to upper case.
           </div>

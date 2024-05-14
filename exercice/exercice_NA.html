@@ -39,9 +39,9 @@
       </code>
       <code data-type="sct">
         test_object("missing_positions")
-        test_function("print", args = "missing_positions")
+        test_output_contains("TRUE", pattern = TRUE, no_output_msg="Make sure you print the positions where values are missing.")
         success_msg("Great job identifying missing values in the vector!")
-      </code>
+      </code>      
       <div data-type="hint">
         Use the `is.na()` function to find which elements are NA in `data_vector`.
       </div>
@@ -70,9 +70,9 @@
       </code>
       <code data-type="sct">
         test_object("mean_value")
-        test_function("print", args = "mean_value")
+        test_output_contains("[0-9.]+", pattern = TRUE, no_output_msg="Make sure you print the mean value excluding NAs.")
         success_msg("Excellent! You've successfully calculated the mean excluding missing values.")
-      </code>
+      </code>      
       <div data-type="hint">
         Use the `mean()` function with the argument `na.rm = TRUE` to exclude NAs.
       </div>
@@ -101,9 +101,9 @@
       </code>
       <code data-type="sct">
         test_object("values")
-        test_function("print", args = "values")
+        test_output_contains("0", pattern = TRUE, no_output_msg="Make sure you print the vector after replacing missing values with zeros.")
         success_msg("Well done! You've successfully replaced missing values with zeros.")
-      </code>
+      </code>      
       <div data-type="hint">
         Use indexing with `is.na()` to replace NAs with zeros in the `values` vector.
       </div>

@@ -62,5 +62,9 @@ resultat <-stringr::str_extract_all(texte, "\\d{3}-\\d{3}-\\d{4}")
 ```
 
 <p id=textIntro> <strong>- Remplacer des motifs</strong> : Modifier des éléments spécifiques dans une chaîne de caractères.</p>
+```{r}
+texte <- "Les pommes sont rouges, les bananes sont jaunes."
+nouveau_texte <- str_replace(texte, "rouges", "vertes")
+```
 
 <p id=textIntro>Passons maintenant<strong> A la Gestion des NA</strong>, Clique sur ce lien :  <a href="Gestion_de_NA.qmd">Gestion des NA</a>
